@@ -3,7 +3,7 @@ using System.Threading;
 
 public class BreathingActivity : Activity
 {
-    protected int timeActivity1 = -1;
+    protected int timeActivity1 = -1; 
     public BreathingActivity() : base()
     {
         setActivityName("BreathingActivity");
