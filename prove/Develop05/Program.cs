@@ -21,7 +21,7 @@ class Program
 
         while (userMenuChoice != 6)
         {   
-            Console.WriteLine("You have X points.");
+            Console.WriteLine($"You have {allGoals.getTotalPoints()} points.");
             Console.WriteLine();
 
             foreach (string menuItem in menu)
@@ -93,7 +93,8 @@ class Program
                     allGoals.SaveGoal();
                     break;
                 case 4:
-                    
+                    SaveLoad load = new SaveLoad();
+                    load.LoadFile();
                     break;
                 case 5:
                     

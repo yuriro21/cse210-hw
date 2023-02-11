@@ -6,6 +6,7 @@ using System.IO;
 
 public class AllGoals
 {
+    protected int _totoalPoints = 0;
     private List<string> allGoals = new List<string>();
 
     public void addGoal(string _goal)
@@ -34,18 +35,23 @@ public class AllGoals
             return;
         }
         SaveLoad save = new SaveLoad();
+        SimpleGoal SG = new SimpleGoal();
         string fileName = save.SetFileName();
 
         List<string> saveGoals = new List<string>();
 
         foreach (string goal in allGoals)
         {
-            saveGoals.Add(goal);
+            saveGoals.Add(goal); // i dont know why i cant use this funtion: ToCSVRecord()
         }
 
         SL.SaveToCSV(saveGoals, fileName);
 
         Console.WriteLine("Goals saved");
+    }
+    public int getTotalPoints()
+    {
+        return _totoalPoints;
     }
 }
 

@@ -16,7 +16,7 @@ public class SimpleGoal : Goal
         setName();
         setDescription();
         setPoints();
-        // Console.WriteLine("_____-----_______");
+        // Console.WriteLine("____________");
         // Console.WriteLine(getName());
         // Console.WriteLine(getDescription());
         // Console.WriteLine(getPoints());

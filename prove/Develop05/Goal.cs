@@ -6,7 +6,7 @@ public abstract class Goal
 {
     
     protected string _name, _description;
-    protected int _points, _totoalPoints = 0;
+    protected int _points;
     public Goal()
     {
     }
@@ -51,10 +51,5 @@ public abstract class Goal
     public int getPoints()
     {
         return _points;
-    }
-
-    public int getTotalPoints()
-    {
-        return _totoalPoints;
     }
 }
