@@ -1,25 +1,25 @@
 using System;
 
-public class Order
+public class Order 
 {
     protected List<Product> productsList = new List<Product>();
     protected List<Customer> customersList = new List<Customer>();
-
+    
     public Order()
     {}
 
     public List<Product> ProductsList { get => productsList; set => productsList = value; }
     public List<Customer> CustomersList { get => customersList; set => customersList = value; }
 
-    public int GetTotalPrice()
+    
+    public int GetTotalPrice(Address address)
     {
-        Customer cus = new Customer();
         int _totalPrice = 0;
         foreach (Product item in productsList)
         {
             _totalPrice += item.Price;
         }
-        if (cus.IsUSA())
+        if (address.Contry == "USA")
         {
             _totalPrice += 5;
         }
@@ -37,7 +37,7 @@ public class Order
         {
             string name = item.ProductName;
             int ID = item.ProductID;
-            namesAndID.Add(name + " " + ID );
+            namesAndID.Add($"  Product: {name}, ID: {ID}");
         }
         return namesAndID;
     } 
@@ -49,7 +49,7 @@ public class Order
         {
             string name = item.CustomerName;
             string direction = item.Address.ToString();
-            namesAndAddress.Add(name + "\n" + direction);
+            namesAndAddress.Add($"   Name: {name} \n{direction}");
         }
         return namesAndAddress;
     }

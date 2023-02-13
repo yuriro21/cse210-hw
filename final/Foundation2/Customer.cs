@@ -3,11 +3,16 @@ using System;
 public class Customer
 {
     private string _customerName;
-    private Address _address;
+    protected Address _address = new Address();
 
     public Customer()
     {
-        Address = new Address();
+    }
+
+    public Customer(string customerName, Address address)
+    {
+        _customerName = customerName;
+        _address = address;
     }
 
     public string CustomerName { get => _customerName; set => _customerName = value; }

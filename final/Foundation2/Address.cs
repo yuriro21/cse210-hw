@@ -2,10 +2,18 @@ using System;
 
 public class Address
 {
-    private string _street, _city, _state, _contry;
+    protected string _street, _city, _state, _contry;
 
     public Address()
     {}
+
+    public Address(string street, string city, string state, string contry)
+    {
+        _street = street;
+        _city = city;
+        _state = state;
+        _contry = contry;
+    }
 
     public string Street { get => _street; set => _street = value; }
     public string City { get => _city; set => _city = value; }
@@ -26,6 +34,6 @@ public class Address
 
     public override string ToString()
     {
-        return string.Format(" Street: {0} \n City: {1} \n State: {2} \n Contry: {3}", _street, _city, _state, _contry);
+        return string.Format("   Street: {0} \n   City: {1} \n   State: {2} \n   Contry: {3}", _street, _city, _state, _contry);
     }
 }
