@@ -51,8 +51,7 @@ class Program
         foreach (Video YouTubeVideo in videoList)
         {        
             Console.WriteLine($"Video {videoNum}: ");
-            Console.WriteLine("Autor: " + YouTubeVideo.Author + "\n" + "Title: " + YouTubeVideo.Title + "\n" + "Seconds: "
-            + YouTubeVideo.Seconds + "\n" + "Number of comments: " + YouTubeVideo.Coments.Count());
+            Console.WriteLine($"Autor: {YouTubeVideo.Author} \nTitle: {YouTubeVideo.Title} \nSeconds: {YouTubeVideo.Seconds} \nNumber of comments: {YouTubeVideo.Coments.Count()}");
             Console.WriteLine("");
             YouTubeVideo.GetAllComments();
             videoNum++;
